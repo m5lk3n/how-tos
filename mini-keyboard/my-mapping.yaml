@@ -1,0 +1,13 @@
+orientation: normal
+rows: 3
+columns: 1
+knobs: 1
+layers:
+  - buttons:
+      - ["win-left"]
+      - ["win-tab"]
+      - ["win-right"]
+    knobs:
+      - ccw: "win-numpadminus"
+        cw: "win-numpadplus"
+        press: "win-escape"
