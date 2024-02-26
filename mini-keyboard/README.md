@@ -34,13 +34,19 @@ This is all on Layer1; I haven't tried the others.
 
 ## Alternative Approach
 
+Here, I use a CLI tool to flash a different mapping on the device.
+
+In a nutshell, the mapping differences are (rest same as above):
+- `Win Left` to push the current window to the left (maximized).
+- `Win Right` to push the current window to the right (maximized).
+
 1. Download [ch57x-keyboard-tool](https://github.com/kriomant/ch57x-keyboard-tool).
 2. Open a powershell on Windows.
 3. To show what keys are supported<sup>1</sup>: `.\ch57x-keyboard-tool.exe show-keys`
 4. To check [my mapping](my-mapping.yaml): `cat .\my-mapping.yaml | .\ch57x-keyboard-tool.exe validate`
 5. To flash my mapping onto the keyboard: `cat .\my-mapping.yaml | .\ch57x-keyboard-tool.exe upload`
 
-<sup>1</sup>: For some reason, there's no `plus` key supported, but `numpadplus`.
+<sup>1</sup>) For some reason, there's no `plus` key supported, but `numpadplus`.
 
 ### Bookmarks
 
