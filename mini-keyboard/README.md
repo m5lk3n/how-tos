@@ -32,16 +32,21 @@ As it turned out, the green buttons for my device are defined as follows:
 
 This is all on Layer1; I haven't tried the others.
 
-## Failed Attempts
+## Alternative Approach
 
-I tried the following alternatives to no avail:
+1. Download [ch57x-keyboard-tool](https://github.com/kriomant/ch57x-keyboard-tool).
+2. Open a powershell on Windows.
+3. To show what keys are supported<sup>1</sup>: `.\ch57x-keyboard-tool.exe show-keys`
+4. To check [my mapping](my-mapping.yaml): `cat .\my-mapping.yaml | .\ch57x-keyboard-tool.exe validate`
+5. To flash my mapping onto the keyboard: `cat .\my-mapping.yaml | .\ch57x-keyboard-tool.exe upload`
 
-1. [ch57x-keyboard-tool](https://github.com/kriomant/ch57x-keyboard-tool):
-According to Window's device manager, my keyboard has the following: 
+<sup>1</sup>: For some reason, there's no `plus` key supported, but `numpadplus`.
 
-- vendor ID: 1189
-- product ID: 8890
+### Bookmarks
 
-Even with these IDs explicitely passed to the tool, the device wasn't recognized. I don't know why, but it kept on showing this [issue](https://github.com/kriomant/ch57x-keyboard-tool/issues/3).
+- [Known keyboard limitation](https://github.com/kriomant/ch57x-keyboard-tool?tab=readme-ov-file#3x1-keys--1-knob-keyboard-limitations)
+- [Known issue](https://github.com/kriomant/ch57x-keyboard-tool/issues/3):
 
-2. With "[The Newest Software](https://cdn.shopify.com/s/files/1/0655/8570/9299/files/New_Software.7z?v=1689124275)" from [aforementioned](https://sikaicase.com/blogs/support/setting-for-software) page, the device connection could not be established either.
+  According to Window's device manager, my keyboard has the following: 
+    - vendor ID: 1189
+    - product ID: 8890
